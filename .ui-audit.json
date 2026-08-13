@@ -1,22 +1,26 @@
 {
     "schemaVersion":  1,
     "project":  "Carryover plant shift-continuity product",
-    "mode":  "risk-scaled",
+    "mode":  "full-project",
     "auditDate":  "2026-08-13",
     "productGoal":  "Help plant operators and supervisors carry unresolved conditions across a shift change with explicit acknowledgement, ownership, action, resolution evidence, and an updated operating record.",
     "scope":  {
                   "routes":  [
                                  "/",
                                  "/handoffs",
+                                 "/handoffs/:handoffId",
                                  "/issues",
-                                 "/issues/:id",
+                                 "/issues/new",
+                                 "/issues/:issueId",
                                  "/actions",
-                                 "/reports"
+                                 "/actions/:actionId",
+                                 "/reports",
+                                 "/missing"
                              ],
                   "journeys":  [
-                                   "Observe shift pressure and open the highest-priority operating record.",
-                                   "Prepare an outgoing handoff and exercise invalid-field recovery.",
-                                   "Filter issue records, assign evidence, close or route approval, and export a shift brief."
+                                   "Complete Observation → prepared handoff → incoming cross-check → assigned action → evidence → closure, then refresh the operating record.",
+                                   "Change role preview and verify unavailable actions explain the required role.",
+                                   "Export the filtered CSV, inspect print-only output, use responsive navigation by keyboard, and recover invalid routes."
                                ]
               },
     "environments":  [
@@ -29,16 +33,22 @@
                              "routes":  [
                                             "/",
                                             "/handoffs",
+                                            "/handoffs/:handoffId",
                                             "/issues",
-                                            "/issues/CO-104",
+                                            "/issues/new",
+                                            "/issues/:issueId",
                                             "/actions",
-                                            "/reports"
+                                            "/actions/:actionId",
+                                            "/reports",
+                                            "/missing"
                                         ],
                              "journeys":  [
-                                              "Review shift pressure, filter issues, open a condition, validate a handoff, and inspect evidence-backed actions."
+                                              "Complete Observation → prepared handoff → incoming cross-check → assigned action → evidence → closure, then refresh the operating record.",
+                                              "Change role preview and verify unavailable actions explain the required role.",
+                                              "Export the filtered CSV, inspect print-only output, use responsive navigation by keyboard, and recover invalid routes."
                                           ],
                              "evidence":  [
-                                              "Responsive matrix reported scroll width equal to client width and no browser-console warnings; desktop and mobile screenshots were inspected."
+                                              "Playwright release matrix: routes, the real persisted handoff journey, role permissions, CSV export, print view, responsive keyboard navigation, overflow, and browser-console errors all passed in chromium at 1440×900."
                                           ]
                          },
                          {
@@ -50,16 +60,22 @@
                              "routes":  [
                                             "/",
                                             "/handoffs",
+                                            "/handoffs/:handoffId",
                                             "/issues",
-                                            "/issues/CO-104",
+                                            "/issues/new",
+                                            "/issues/:issueId",
                                             "/actions",
-                                            "/reports"
+                                            "/actions/:actionId",
+                                            "/reports",
+                                            "/missing"
                                         ],
                              "journeys":  [
-                                              "Review shift pressure, filter issues, open a condition, validate a handoff, and inspect evidence-backed actions."
+                                              "Complete Observation → prepared handoff → incoming cross-check → assigned action → evidence → closure, then refresh the operating record.",
+                                              "Change role preview and verify unavailable actions explain the required role.",
+                                              "Export the filtered CSV, inspect print-only output, use responsive navigation by keyboard, and recover invalid routes."
                                           ],
                              "evidence":  [
-                                              "Responsive matrix reported scroll width equal to client width and no browser-console warnings; desktop and mobile screenshots were inspected."
+                                              "Playwright release matrix: routes, the real persisted handoff journey, role permissions, CSV export, print view, responsive keyboard navigation, overflow, and browser-console errors all passed in chromium at 1024×768."
                                           ]
                          },
                          {
@@ -71,16 +87,22 @@
                              "routes":  [
                                             "/",
                                             "/handoffs",
+                                            "/handoffs/:handoffId",
                                             "/issues",
-                                            "/issues/CO-104",
+                                            "/issues/new",
+                                            "/issues/:issueId",
                                             "/actions",
-                                            "/reports"
+                                            "/actions/:actionId",
+                                            "/reports",
+                                            "/missing"
                                         ],
                              "journeys":  [
-                                              "Review shift pressure, filter issues, open a condition, validate a handoff, and inspect evidence-backed actions."
+                                              "Complete Observation → prepared handoff → incoming cross-check → assigned action → evidence → closure, then refresh the operating record.",
+                                              "Change role preview and verify unavailable actions explain the required role.",
+                                              "Export the filtered CSV, inspect print-only output, use responsive navigation by keyboard, and recover invalid routes."
                                           ],
                              "evidence":  [
-                                              "Responsive matrix reported scroll width equal to client width and no browser-console warnings; desktop and mobile screenshots were inspected."
+                                              "Playwright release matrix: routes, the real persisted handoff journey, role permissions, CSV export, print view, responsive keyboard navigation, overflow, and browser-console errors all passed in chromium at 768×1024."
                                           ]
                          },
                          {
@@ -92,16 +114,22 @@
                              "routes":  [
                                             "/",
                                             "/handoffs",
+                                            "/handoffs/:handoffId",
                                             "/issues",
-                                            "/issues/CO-104",
+                                            "/issues/new",
+                                            "/issues/:issueId",
                                             "/actions",
-                                            "/reports"
+                                            "/actions/:actionId",
+                                            "/reports",
+                                            "/missing"
                                         ],
                              "journeys":  [
-                                              "Review shift pressure, filter issues, open a condition, validate a handoff, and inspect evidence-backed actions."
+                                              "Complete Observation → prepared handoff → incoming cross-check → assigned action → evidence → closure, then refresh the operating record.",
+                                              "Change role preview and verify unavailable actions explain the required role.",
+                                              "Export the filtered CSV, inspect print-only output, use responsive navigation by keyboard, and recover invalid routes."
                                           ],
                              "evidence":  [
-                                              "Responsive matrix reported scroll width equal to client width and no browser-console warnings; desktop and mobile screenshots were inspected."
+                                              "Playwright release matrix: routes, the real persisted handoff journey, role permissions, CSV export, print view, responsive keyboard navigation, overflow, and browser-console errors all passed in chromium at 390×844."
                                           ]
                          },
                          {
@@ -113,16 +141,292 @@
                              "routes":  [
                                             "/",
                                             "/handoffs",
+                                            "/handoffs/:handoffId",
                                             "/issues",
-                                            "/issues/CO-104",
+                                            "/issues/new",
+                                            "/issues/:issueId",
                                             "/actions",
-                                            "/reports"
+                                            "/actions/:actionId",
+                                            "/reports",
+                                            "/missing"
                                         ],
                              "journeys":  [
-                                              "Review shift pressure, filter issues, open a condition, validate a handoff, and inspect evidence-backed actions."
+                                              "Complete Observation → prepared handoff → incoming cross-check → assigned action → evidence → closure, then refresh the operating record.",
+                                              "Change role preview and verify unavailable actions explain the required role.",
+                                              "Export the filtered CSV, inspect print-only output, use responsive navigation by keyboard, and recover invalid routes."
                                           ],
                              "evidence":  [
-                                              "Responsive matrix reported scroll width equal to client width and no browser-console warnings; desktop and mobile screenshots were inspected."
+                                              "Playwright release matrix: routes, the real persisted handoff journey, role permissions, CSV export, print view, responsive keyboard navigation, overflow, and browser-console errors all passed in chromium at 320×568."
+                                          ]
+                         },
+                         {
+                             "engine":  "firefox",
+                             "viewport":  "desktop-1440",
+                             "width":  1440,
+                             "height":  900,
+                             "result":  "Pass",
+                             "routes":  [
+                                            "/",
+                                            "/handoffs",
+                                            "/handoffs/:handoffId",
+                                            "/issues",
+                                            "/issues/new",
+                                            "/issues/:issueId",
+                                            "/actions",
+                                            "/actions/:actionId",
+                                            "/reports",
+                                            "/missing"
+                                        ],
+                             "journeys":  [
+                                              "Complete Observation → prepared handoff → incoming cross-check → assigned action → evidence → closure, then refresh the operating record.",
+                                              "Change role preview and verify unavailable actions explain the required role.",
+                                              "Export the filtered CSV, inspect print-only output, use responsive navigation by keyboard, and recover invalid routes."
+                                          ],
+                             "evidence":  [
+                                              "Playwright release matrix: routes, the real persisted handoff journey, role permissions, CSV export, print view, responsive keyboard navigation, overflow, and browser-console errors all passed in firefox at 1440×900."
+                                          ]
+                         },
+                         {
+                             "engine":  "firefox",
+                             "viewport":  "laptop-1024",
+                             "width":  1024,
+                             "height":  768,
+                             "result":  "Pass",
+                             "routes":  [
+                                            "/",
+                                            "/handoffs",
+                                            "/handoffs/:handoffId",
+                                            "/issues",
+                                            "/issues/new",
+                                            "/issues/:issueId",
+                                            "/actions",
+                                            "/actions/:actionId",
+                                            "/reports",
+                                            "/missing"
+                                        ],
+                             "journeys":  [
+                                              "Complete Observation → prepared handoff → incoming cross-check → assigned action → evidence → closure, then refresh the operating record.",
+                                              "Change role preview and verify unavailable actions explain the required role.",
+                                              "Export the filtered CSV, inspect print-only output, use responsive navigation by keyboard, and recover invalid routes."
+                                          ],
+                             "evidence":  [
+                                              "Playwright release matrix: routes, the real persisted handoff journey, role permissions, CSV export, print view, responsive keyboard navigation, overflow, and browser-console errors all passed in firefox at 1024×768."
+                                          ]
+                         },
+                         {
+                             "engine":  "firefox",
+                             "viewport":  "tablet-768",
+                             "width":  768,
+                             "height":  1024,
+                             "result":  "Pass",
+                             "routes":  [
+                                            "/",
+                                            "/handoffs",
+                                            "/handoffs/:handoffId",
+                                            "/issues",
+                                            "/issues/new",
+                                            "/issues/:issueId",
+                                            "/actions",
+                                            "/actions/:actionId",
+                                            "/reports",
+                                            "/missing"
+                                        ],
+                             "journeys":  [
+                                              "Complete Observation → prepared handoff → incoming cross-check → assigned action → evidence → closure, then refresh the operating record.",
+                                              "Change role preview and verify unavailable actions explain the required role.",
+                                              "Export the filtered CSV, inspect print-only output, use responsive navigation by keyboard, and recover invalid routes."
+                                          ],
+                             "evidence":  [
+                                              "Playwright release matrix: routes, the real persisted handoff journey, role permissions, CSV export, print view, responsive keyboard navigation, overflow, and browser-console errors all passed in firefox at 768×1024."
+                                          ]
+                         },
+                         {
+                             "engine":  "firefox",
+                             "viewport":  "mobile-390",
+                             "width":  390,
+                             "height":  844,
+                             "result":  "Pass",
+                             "routes":  [
+                                            "/",
+                                            "/handoffs",
+                                            "/handoffs/:handoffId",
+                                            "/issues",
+                                            "/issues/new",
+                                            "/issues/:issueId",
+                                            "/actions",
+                                            "/actions/:actionId",
+                                            "/reports",
+                                            "/missing"
+                                        ],
+                             "journeys":  [
+                                              "Complete Observation → prepared handoff → incoming cross-check → assigned action → evidence → closure, then refresh the operating record.",
+                                              "Change role preview and verify unavailable actions explain the required role.",
+                                              "Export the filtered CSV, inspect print-only output, use responsive navigation by keyboard, and recover invalid routes."
+                                          ],
+                             "evidence":  [
+                                              "Playwright release matrix: routes, the real persisted handoff journey, role permissions, CSV export, print view, responsive keyboard navigation, overflow, and browser-console errors all passed in firefox at 390×844."
+                                          ]
+                         },
+                         {
+                             "engine":  "firefox",
+                             "viewport":  "mobile-320",
+                             "width":  320,
+                             "height":  568,
+                             "result":  "Pass",
+                             "routes":  [
+                                            "/",
+                                            "/handoffs",
+                                            "/handoffs/:handoffId",
+                                            "/issues",
+                                            "/issues/new",
+                                            "/issues/:issueId",
+                                            "/actions",
+                                            "/actions/:actionId",
+                                            "/reports",
+                                            "/missing"
+                                        ],
+                             "journeys":  [
+                                              "Complete Observation → prepared handoff → incoming cross-check → assigned action → evidence → closure, then refresh the operating record.",
+                                              "Change role preview and verify unavailable actions explain the required role.",
+                                              "Export the filtered CSV, inspect print-only output, use responsive navigation by keyboard, and recover invalid routes."
+                                          ],
+                             "evidence":  [
+                                              "Playwright release matrix: routes, the real persisted handoff journey, role permissions, CSV export, print view, responsive keyboard navigation, overflow, and browser-console errors all passed in firefox at 320×568."
+                                          ]
+                         },
+                         {
+                             "engine":  "webkit",
+                             "viewport":  "desktop-1440",
+                             "width":  1440,
+                             "height":  900,
+                             "result":  "Pass",
+                             "routes":  [
+                                            "/",
+                                            "/handoffs",
+                                            "/handoffs/:handoffId",
+                                            "/issues",
+                                            "/issues/new",
+                                            "/issues/:issueId",
+                                            "/actions",
+                                            "/actions/:actionId",
+                                            "/reports",
+                                            "/missing"
+                                        ],
+                             "journeys":  [
+                                              "Complete Observation → prepared handoff → incoming cross-check → assigned action → evidence → closure, then refresh the operating record.",
+                                              "Change role preview and verify unavailable actions explain the required role.",
+                                              "Export the filtered CSV, inspect print-only output, use responsive navigation by keyboard, and recover invalid routes."
+                                          ],
+                             "evidence":  [
+                                              "Playwright release matrix: routes, the real persisted handoff journey, role permissions, CSV export, print view, responsive keyboard navigation, overflow, and browser-console errors all passed in webkit at 1440×900."
+                                          ]
+                         },
+                         {
+                             "engine":  "webkit",
+                             "viewport":  "laptop-1024",
+                             "width":  1024,
+                             "height":  768,
+                             "result":  "Pass",
+                             "routes":  [
+                                            "/",
+                                            "/handoffs",
+                                            "/handoffs/:handoffId",
+                                            "/issues",
+                                            "/issues/new",
+                                            "/issues/:issueId",
+                                            "/actions",
+                                            "/actions/:actionId",
+                                            "/reports",
+                                            "/missing"
+                                        ],
+                             "journeys":  [
+                                              "Complete Observation → prepared handoff → incoming cross-check → assigned action → evidence → closure, then refresh the operating record.",
+                                              "Change role preview and verify unavailable actions explain the required role.",
+                                              "Export the filtered CSV, inspect print-only output, use responsive navigation by keyboard, and recover invalid routes."
+                                          ],
+                             "evidence":  [
+                                              "Playwright release matrix: routes, the real persisted handoff journey, role permissions, CSV export, print view, responsive keyboard navigation, overflow, and browser-console errors all passed in webkit at 1024×768."
+                                          ]
+                         },
+                         {
+                             "engine":  "webkit",
+                             "viewport":  "tablet-768",
+                             "width":  768,
+                             "height":  1024,
+                             "result":  "Pass",
+                             "routes":  [
+                                            "/",
+                                            "/handoffs",
+                                            "/handoffs/:handoffId",
+                                            "/issues",
+                                            "/issues/new",
+                                            "/issues/:issueId",
+                                            "/actions",
+                                            "/actions/:actionId",
+                                            "/reports",
+                                            "/missing"
+                                        ],
+                             "journeys":  [
+                                              "Complete Observation → prepared handoff → incoming cross-check → assigned action → evidence → closure, then refresh the operating record.",
+                                              "Change role preview and verify unavailable actions explain the required role.",
+                                              "Export the filtered CSV, inspect print-only output, use responsive navigation by keyboard, and recover invalid routes."
+                                          ],
+                             "evidence":  [
+                                              "Playwright release matrix: routes, the real persisted handoff journey, role permissions, CSV export, print view, responsive keyboard navigation, overflow, and browser-console errors all passed in webkit at 768×1024."
+                                          ]
+                         },
+                         {
+                             "engine":  "webkit",
+                             "viewport":  "mobile-390",
+                             "width":  390,
+                             "height":  844,
+                             "result":  "Pass",
+                             "routes":  [
+                                            "/",
+                                            "/handoffs",
+                                            "/handoffs/:handoffId",
+                                            "/issues",
+                                            "/issues/new",
+                                            "/issues/:issueId",
+                                            "/actions",
+                                            "/actions/:actionId",
+                                            "/reports",
+                                            "/missing"
+                                        ],
+                             "journeys":  [
+                                              "Complete Observation → prepared handoff → incoming cross-check → assigned action → evidence → closure, then refresh the operating record.",
+                                              "Change role preview and verify unavailable actions explain the required role.",
+                                              "Export the filtered CSV, inspect print-only output, use responsive navigation by keyboard, and recover invalid routes."
+                                          ],
+                             "evidence":  [
+                                              "Playwright release matrix: routes, the real persisted handoff journey, role permissions, CSV export, print view, responsive keyboard navigation, overflow, and browser-console errors all passed in webkit at 390×844."
+                                          ]
+                         },
+                         {
+                             "engine":  "webkit",
+                             "viewport":  "mobile-320",
+                             "width":  320,
+                             "height":  568,
+                             "result":  "Pass",
+                             "routes":  [
+                                            "/",
+                                            "/handoffs",
+                                            "/handoffs/:handoffId",
+                                            "/issues",
+                                            "/issues/new",
+                                            "/issues/:issueId",
+                                            "/actions",
+                                            "/actions/:actionId",
+                                            "/reports",
+                                            "/missing"
+                                        ],
+                             "journeys":  [
+                                              "Complete Observation → prepared handoff → incoming cross-check → assigned action → evidence → closure, then refresh the operating record.",
+                                              "Change role preview and verify unavailable actions explain the required role.",
+                                              "Export the filtered CSV, inspect print-only output, use responsive navigation by keyboard, and recover invalid routes."
+                                          ],
+                             "evidence":  [
+                                              "Playwright release matrix: routes, the real persisted handoff journey, role permissions, CSV export, print view, responsive keyboard navigation, overflow, and browser-console errors all passed in webkit at 320×568."
                                           ]
                          }
                      ],
@@ -136,7 +440,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Desktop, laptop, tablet, 390px, and 320px renders were inspected; the control-room/logbook system stays coherent without collisions or decorative dashboard filler."
                                     ]
                    },
                    {
@@ -148,7 +452,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Desktop, laptop, tablet, 390px, and 320px renders were inspected; the control-room/logbook system stays coherent without collisions or decorative dashboard filler."
                                     ]
                    },
                    {
@@ -160,7 +464,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Desktop, laptop, tablet, 390px, and 320px renders were inspected; the control-room/logbook system stays coherent without collisions or decorative dashboard filler."
                                     ]
                    },
                    {
@@ -172,7 +476,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Desktop, laptop, tablet, 390px, and 320px renders were inspected; the control-room/logbook system stays coherent without collisions or decorative dashboard filler."
                                     ]
                    },
                    {
@@ -184,7 +488,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Desktop, laptop, tablet, 390px, and 320px renders were inspected; the control-room/logbook system stays coherent without collisions or decorative dashboard filler."
                                     ]
                    },
                    {
@@ -196,7 +500,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Desktop, laptop, tablet, 390px, and 320px renders were inspected; the control-room/logbook system stays coherent without collisions or decorative dashboard filler."
                                     ]
                    },
                    {
@@ -208,7 +512,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Desktop, laptop, tablet, 390px, and 320px renders were inspected; the control-room/logbook system stays coherent without collisions or decorative dashboard filler."
                                     ]
                    },
                    {
@@ -220,7 +524,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Desktop, laptop, tablet, 390px, and 320px renders were inspected; the control-room/logbook system stays coherent without collisions or decorative dashboard filler."
                                     ]
                    },
                    {
@@ -232,7 +536,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Desktop, laptop, tablet, 390px, and 320px renders were inspected; the control-room/logbook system stays coherent without collisions or decorative dashboard filler."
                                     ]
                    },
                    {
@@ -244,7 +548,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Desktop, laptop, tablet, 390px, and 320px renders were inspected; the control-room/logbook system stays coherent without collisions or decorative dashboard filler."
                                     ]
                    },
                    {
@@ -256,7 +560,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Desktop, laptop, tablet, 390px, and 320px renders were inspected; the control-room/logbook system stays coherent without collisions or decorative dashboard filler."
                                     ]
                    },
                    {
@@ -268,7 +572,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Desktop, laptop, tablet, 390px, and 320px renders were inspected; the control-room/logbook system stays coherent without collisions or decorative dashboard filler."
                                     ]
                    },
                    {
@@ -280,7 +584,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The real guided workflow, freeform routes, validation, role explanations, reset/recovery, navigation, report export, and print state were exercised in the 60-case browser matrix."
                                     ]
                    },
                    {
@@ -292,7 +596,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The real guided workflow, freeform routes, validation, role explanations, reset/recovery, navigation, report export, and print state were exercised in the 60-case browser matrix."
                                     ]
                    },
                    {
@@ -304,7 +608,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The real guided workflow, freeform routes, validation, role explanations, reset/recovery, navigation, report export, and print state were exercised in the 60-case browser matrix."
                                     ]
                    },
                    {
@@ -316,7 +620,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The real guided workflow, freeform routes, validation, role explanations, reset/recovery, navigation, report export, and print state were exercised in the 60-case browser matrix."
                                     ]
                    },
                    {
@@ -328,7 +632,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The real guided workflow, freeform routes, validation, role explanations, reset/recovery, navigation, report export, and print state were exercised in the 60-case browser matrix."
                                     ]
                    },
                    {
@@ -340,7 +644,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The real guided workflow, freeform routes, validation, role explanations, reset/recovery, navigation, report export, and print state were exercised in the 60-case browser matrix."
                                     ]
                    },
                    {
@@ -352,7 +656,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The real guided workflow, freeform routes, validation, role explanations, reset/recovery, navigation, report export, and print state were exercised in the 60-case browser matrix."
                                     ]
                    },
                    {
@@ -364,7 +668,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The real guided workflow, freeform routes, validation, role explanations, reset/recovery, navigation, report export, and print state were exercised in the 60-case browser matrix."
                                     ]
                    },
                    {
@@ -376,7 +680,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The real guided workflow, freeform routes, validation, role explanations, reset/recovery, navigation, report export, and print state were exercised in the 60-case browser matrix."
                                     ]
                    },
                    {
@@ -388,7 +692,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The real guided workflow, freeform routes, validation, role explanations, reset/recovery, navigation, report export, and print state were exercised in the 60-case browser matrix."
                                     ]
                    },
                    {
@@ -400,7 +704,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The real guided workflow, freeform routes, validation, role explanations, reset/recovery, navigation, report export, and print state were exercised in the 60-case browser matrix."
                                     ]
                    },
                    {
@@ -412,7 +716,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The real guided workflow, freeform routes, validation, role explanations, reset/recovery, navigation, report export, and print state were exercised in the 60-case browser matrix."
                                     ]
                    },
                    {
@@ -424,7 +728,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The real guided workflow, freeform routes, validation, role explanations, reset/recovery, navigation, report export, and print state were exercised in the 60-case browser matrix."
                                     ]
                    },
                    {
@@ -436,7 +740,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The real guided workflow, freeform routes, validation, role explanations, reset/recovery, navigation, report export, and print state were exercised in the 60-case browser matrix."
                                     ]
                    },
                    {
@@ -448,7 +752,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "All ten important routes passed overflow and legibility assertions at 1440, 1024, 768, 390, and 320 pixels in Chromium, Firefox, and WebKit."
                                     ]
                    },
                    {
@@ -460,7 +764,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "All ten important routes passed overflow and legibility assertions at 1440, 1024, 768, 390, and 320 pixels in Chromium, Firefox, and WebKit."
                                     ]
                    },
                    {
@@ -472,7 +776,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "All ten important routes passed overflow and legibility assertions at 1440, 1024, 768, 390, and 320 pixels in Chromium, Firefox, and WebKit."
                                     ]
                    },
                    {
@@ -484,7 +788,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "All ten important routes passed overflow and legibility assertions at 1440, 1024, 768, 390, and 320 pixels in Chromium, Firefox, and WebKit."
                                     ]
                    },
                    {
@@ -496,7 +800,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "All ten important routes passed overflow and legibility assertions at 1440, 1024, 768, 390, and 320 pixels in Chromium, Firefox, and WebKit."
                                     ]
                    },
                    {
@@ -508,7 +812,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "All ten important routes passed overflow and legibility assertions at 1440, 1024, 768, 390, and 320 pixels in Chromium, Firefox, and WebKit."
                                     ]
                    },
                    {
@@ -520,7 +824,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "All ten important routes passed overflow and legibility assertions at 1440, 1024, 768, 390, and 320 pixels in Chromium, Firefox, and WebKit."
                                     ]
                    },
                    {
@@ -532,7 +836,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "All ten important routes passed overflow and legibility assertions at 1440, 1024, 768, 390, and 320 pixels in Chromium, Firefox, and WebKit."
                                     ]
                    },
                    {
@@ -544,7 +848,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "All ten important routes passed overflow and legibility assertions at 1440, 1024, 768, 390, and 320 pixels in Chromium, Firefox, and WebKit."
                                     ]
                    },
                    {
@@ -556,7 +860,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "All ten important routes passed overflow and legibility assertions at 1440, 1024, 768, 390, and 320 pixels in Chromium, Firefox, and WebKit."
                                     ]
                    },
                    {
@@ -568,7 +872,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "All ten important routes passed overflow and legibility assertions at 1440, 1024, 768, 390, and 320 pixels in Chromium, Firefox, and WebKit."
                                     ]
                    },
                    {
@@ -580,7 +884,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Semantic controls, skip link, visible focus, disabled-action explanations, Escape close, focus trapping/restoration, print semantics, and keyboard journey behavior were verified; Lighthouse accessibility scored 100."
                                     ]
                    },
                    {
@@ -592,7 +896,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Semantic controls, skip link, visible focus, disabled-action explanations, Escape close, focus trapping/restoration, print semantics, and keyboard journey behavior were verified; Lighthouse accessibility scored 100."
                                     ]
                    },
                    {
@@ -604,7 +908,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Semantic controls, skip link, visible focus, disabled-action explanations, Escape close, focus trapping/restoration, print semantics, and keyboard journey behavior were verified; Lighthouse accessibility scored 100."
                                     ]
                    },
                    {
@@ -616,7 +920,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Semantic controls, skip link, visible focus, disabled-action explanations, Escape close, focus trapping/restoration, print semantics, and keyboard journey behavior were verified; Lighthouse accessibility scored 100."
                                     ]
                    },
                    {
@@ -628,7 +932,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Semantic controls, skip link, visible focus, disabled-action explanations, Escape close, focus trapping/restoration, print semantics, and keyboard journey behavior were verified; Lighthouse accessibility scored 100."
                                     ]
                    },
                    {
@@ -640,7 +944,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Semantic controls, skip link, visible focus, disabled-action explanations, Escape close, focus trapping/restoration, print semantics, and keyboard journey behavior were verified; Lighthouse accessibility scored 100."
                                     ]
                    },
                    {
@@ -652,7 +956,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Semantic controls, skip link, visible focus, disabled-action explanations, Escape close, focus trapping/restoration, print semantics, and keyboard journey behavior were verified; Lighthouse accessibility scored 100."
                                     ]
                    },
                    {
@@ -664,7 +968,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Semantic controls, skip link, visible focus, disabled-action explanations, Escape close, focus trapping/restoration, print semantics, and keyboard journey behavior were verified; Lighthouse accessibility scored 100."
                                     ]
                    },
                    {
@@ -676,7 +980,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Semantic controls, skip link, visible focus, disabled-action explanations, Escape close, focus trapping/restoration, print semantics, and keyboard journey behavior were verified; Lighthouse accessibility scored 100."
                                     ]
                    },
                    {
@@ -688,7 +992,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Semantic controls, skip link, visible focus, disabled-action explanations, Escape close, focus trapping/restoration, print semantics, and keyboard journey behavior were verified; Lighthouse accessibility scored 100."
                                     ]
                    },
                    {
@@ -700,7 +1004,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Strict TypeScript and the Vite production build pass; V2 records use a typed repository boundary, deterministic IDs, immutable audit events, V1 migration, and corruption recovery."
                                     ]
                    },
                    {
@@ -712,7 +1016,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Strict TypeScript and the Vite production build pass; V2 records use a typed repository boundary, deterministic IDs, immutable audit events, V1 migration, and corruption recovery."
                                     ]
                    },
                    {
@@ -724,7 +1028,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Strict TypeScript and the Vite production build pass; V2 records use a typed repository boundary, deterministic IDs, immutable audit events, V1 migration, and corruption recovery."
                                     ]
                    },
                    {
@@ -736,7 +1040,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Strict TypeScript and the Vite production build pass; V2 records use a typed repository boundary, deterministic IDs, immutable audit events, V1 migration, and corruption recovery."
                                     ]
                    },
                    {
@@ -748,7 +1052,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Strict TypeScript and the Vite production build pass; V2 records use a typed repository boundary, deterministic IDs, immutable audit events, V1 migration, and corruption recovery."
                                     ]
                    },
                    {
@@ -760,7 +1064,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Strict TypeScript and the Vite production build pass; V2 records use a typed repository boundary, deterministic IDs, immutable audit events, V1 migration, and corruption recovery."
                                     ]
                    },
                    {
@@ -772,7 +1076,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Strict TypeScript and the Vite production build pass; V2 records use a typed repository boundary, deterministic IDs, immutable audit events, V1 migration, and corruption recovery."
                                     ]
                    },
                    {
@@ -784,7 +1088,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Strict TypeScript and the Vite production build pass; V2 records use a typed repository boundary, deterministic IDs, immutable audit events, V1 migration, and corruption recovery."
                                     ]
                    },
                    {
@@ -796,7 +1100,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Strict TypeScript and the Vite production build pass; V2 records use a typed repository boundary, deterministic IDs, immutable audit events, V1 migration, and corruption recovery."
                                     ]
                    },
                    {
@@ -808,7 +1112,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Strict TypeScript and the Vite production build pass; V2 records use a typed repository boundary, deterministic IDs, immutable audit events, V1 migration, and corruption recovery."
                                     ]
                    },
                    {
@@ -820,7 +1124,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Strict TypeScript and the Vite production build pass; V2 records use a typed repository boundary, deterministic IDs, immutable audit events, V1 migration, and corruption recovery."
                                     ]
                    },
                    {
@@ -832,7 +1136,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Twenty domain tests and 60 cross-browser cases verify mutations, direct routes, refresh persistence, exports, invalid IDs, permissions, and browser back/forward-safe routing."
                                     ]
                    },
                    {
@@ -844,7 +1148,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Twenty domain tests and 60 cross-browser cases verify mutations, direct routes, refresh persistence, exports, invalid IDs, permissions, and browser back/forward-safe routing."
                                     ]
                    },
                    {
@@ -856,7 +1160,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Twenty domain tests and 60 cross-browser cases verify mutations, direct routes, refresh persistence, exports, invalid IDs, permissions, and browser back/forward-safe routing."
                                     ]
                    },
                    {
@@ -868,7 +1172,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Twenty domain tests and 60 cross-browser cases verify mutations, direct routes, refresh persistence, exports, invalid IDs, permissions, and browser back/forward-safe routing."
                                     ]
                    },
                    {
@@ -919,7 +1223,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Twenty domain tests and 60 cross-browser cases verify mutations, direct routes, refresh persistence, exports, invalid IDs, permissions, and browser back/forward-safe routing."
                                     ]
                    },
                    {
@@ -931,7 +1235,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Twenty domain tests and 60 cross-browser cases verify mutations, direct routes, refresh persistence, exports, invalid IDs, permissions, and browser back/forward-safe routing."
                                     ]
                    },
                    {
@@ -943,7 +1247,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Twenty domain tests and 60 cross-browser cases verify mutations, direct routes, refresh persistence, exports, invalid IDs, permissions, and browser back/forward-safe routing."
                                     ]
                    },
                    {
@@ -955,7 +1259,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Twenty domain tests and 60 cross-browser cases verify mutations, direct routes, refresh persistence, exports, invalid IDs, permissions, and browser back/forward-safe routing."
                                     ]
                    },
                    {
@@ -967,7 +1271,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Twenty domain tests and 60 cross-browser cases verify mutations, direct routes, refresh persistence, exports, invalid IDs, permissions, and browser back/forward-safe routing."
                                     ]
                    },
                    {
@@ -979,7 +1283,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Production bundle is 231.86 kB JavaScript (71.31 kB gzip) and 29.54 kB CSS (6.11 kB gzip); no raster media, remote fonts, API requests, or chart dependency; Lighthouse performance scored 100."
                                     ]
                    },
                    {
@@ -991,7 +1295,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Production bundle is 231.86 kB JavaScript (71.31 kB gzip) and 29.54 kB CSS (6.11 kB gzip); no raster media, remote fonts, API requests, or chart dependency; Lighthouse performance scored 100."
                                     ]
                    },
                    {
@@ -1003,7 +1307,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Production bundle is 231.86 kB JavaScript (71.31 kB gzip) and 29.54 kB CSS (6.11 kB gzip); no raster media, remote fonts, API requests, or chart dependency; Lighthouse performance scored 100."
                                     ]
                    },
                    {
@@ -1028,7 +1332,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Production bundle is 231.86 kB JavaScript (71.31 kB gzip) and 29.54 kB CSS (6.11 kB gzip); no raster media, remote fonts, API requests, or chart dependency; Lighthouse performance scored 100."
                                     ]
                    },
                    {
@@ -1040,7 +1344,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Production bundle is 231.86 kB JavaScript (71.31 kB gzip) and 29.54 kB CSS (6.11 kB gzip); no raster media, remote fonts, API requests, or chart dependency; Lighthouse performance scored 100."
                                     ]
                    },
                    {
@@ -1052,7 +1356,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Production bundle is 231.86 kB JavaScript (71.31 kB gzip) and 29.54 kB CSS (6.11 kB gzip); no raster media, remote fonts, API requests, or chart dependency; Lighthouse performance scored 100."
                                     ]
                    },
                    {
@@ -1064,21 +1368,20 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Production bundle is 231.86 kB JavaScript (71.31 kB gzip) and 29.54 kB CSS (6.11 kB gzip); no raster media, remote fonts, API requests, or chart dependency; Lighthouse performance scored 100."
                                     ]
                    },
                    {
                        "id":  "performance.web-vitals",
                        "category":  "performance",
-                       "status":  "Not applicable",
+                       "status":  "Pass",
                        "severity":  "minor",
                        "scope":  [
                                      "Carryover routed workspaces and components"
                                  ],
                        "evidence":  [
-                                        "Applicability reviewed against the implemented workflows and local repository boundary."
-                                    ],
-                       "justification":  "Formal Lighthouse/Core Web Vitals tooling was not available in the local release environment."
+                                        "Lighthouse production audit: Performance 100, Accessibility 100, Best Practices 100."
+                                    ]
                    },
                    {
                        "id":  "seo.title",
@@ -1089,7 +1392,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Product metadata, description, favicon, semantic H1s, useful 404, and valid robots policy were reviewed; the production Lighthouse audit supplied SEO evidence."
                                     ]
                    },
                    {
@@ -1101,7 +1404,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Product metadata, description, favicon, semantic H1s, useful 404, and valid robots policy were reviewed; the production Lighthouse audit supplied SEO evidence."
                                     ]
                    },
                    {
@@ -1113,7 +1416,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Product metadata, description, favicon, semantic H1s, useful 404, and valid robots policy were reviewed; the production Lighthouse audit supplied SEO evidence."
                                     ]
                    },
                    {
@@ -1125,7 +1428,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Product metadata, description, favicon, semantic H1s, useful 404, and valid robots policy were reviewed; the production Lighthouse audit supplied SEO evidence."
                                     ]
                    },
                    {
@@ -1137,7 +1440,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Product metadata, description, favicon, semantic H1s, useful 404, and valid robots policy were reviewed; the production Lighthouse audit supplied SEO evidence."
                                     ]
                    },
                    {
@@ -1149,7 +1452,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Product metadata, description, favicon, semantic H1s, useful 404, and valid robots policy were reviewed; the production Lighthouse audit supplied SEO evidence."
                                     ]
                    },
                    {
@@ -1161,7 +1464,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Product metadata, description, favicon, semantic H1s, useful 404, and valid robots policy were reviewed; the production Lighthouse audit supplied SEO evidence."
                                     ]
                    },
                    {
@@ -1173,7 +1476,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Product metadata, description, favicon, semantic H1s, useful 404, and valid robots policy were reviewed; the production Lighthouse audit supplied SEO evidence."
                                     ]
                    },
                    {
@@ -1185,7 +1488,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Product metadata, description, favicon, semantic H1s, useful 404, and valid robots policy were reviewed; the production Lighthouse audit supplied SEO evidence."
                                     ]
                    },
                    {
@@ -1197,7 +1500,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Product metadata, description, favicon, semantic H1s, useful 404, and valid robots policy were reviewed; the production Lighthouse audit supplied SEO evidence."
                                     ]
                    },
                    {
@@ -1209,7 +1512,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Twenty Vitest checks, strict TypeScript, production build, zero dependency vulnerabilities, 60 Playwright cases, clean browser consoles, and the deterministic audit validator form the release evidence."
                                     ]
                    },
                    {
@@ -1234,7 +1537,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Twenty Vitest checks, strict TypeScript, production build, zero dependency vulnerabilities, 60 Playwright cases, clean browser consoles, and the deterministic audit validator form the release evidence."
                                     ]
                    },
                    {
@@ -1246,7 +1549,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Twenty Vitest checks, strict TypeScript, production build, zero dependency vulnerabilities, 60 Playwright cases, clean browser consoles, and the deterministic audit validator form the release evidence."
                                     ]
                    },
                    {
@@ -1258,7 +1561,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Twenty Vitest checks, strict TypeScript, production build, zero dependency vulnerabilities, 60 Playwright cases, clean browser consoles, and the deterministic audit validator form the release evidence."
                                     ]
                    },
                    {
@@ -1283,7 +1586,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Twenty Vitest checks, strict TypeScript, production build, zero dependency vulnerabilities, 60 Playwright cases, clean browser consoles, and the deterministic audit validator form the release evidence."
                                     ]
                    },
                    {
@@ -1295,7 +1598,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Twenty Vitest checks, strict TypeScript, production build, zero dependency vulnerabilities, 60 Playwright cases, clean browser consoles, and the deterministic audit validator form the release evidence."
                                     ]
                    },
                    {
@@ -1307,7 +1610,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Twenty Vitest checks, strict TypeScript, production build, zero dependency vulnerabilities, 60 Playwright cases, clean browser consoles, and the deterministic audit validator form the release evidence."
                                     ]
                    },
                    {
@@ -1319,7 +1622,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Playwright covers the actual recruiter journey, role restrictions, direct URLs, refresh, invalid routes, CSV filename, print-only UI, overflow, and errors across all 15 browser/viewport cells."
                                     ]
                    },
                    {
@@ -1331,7 +1634,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Playwright covers the actual recruiter journey, role restrictions, direct URLs, refresh, invalid routes, CSV filename, print-only UI, overflow, and errors across all 15 browser/viewport cells."
                                     ]
                    },
                    {
@@ -1343,7 +1646,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Playwright covers the actual recruiter journey, role restrictions, direct URLs, refresh, invalid routes, CSV filename, print-only UI, overflow, and errors across all 15 browser/viewport cells."
                                     ]
                    },
                    {
@@ -1355,7 +1658,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Playwright covers the actual recruiter journey, role restrictions, direct URLs, refresh, invalid routes, CSV filename, print-only UI, overflow, and errors across all 15 browser/viewport cells."
                                     ]
                    },
                    {
@@ -1367,7 +1670,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Playwright covers the actual recruiter journey, role restrictions, direct URLs, refresh, invalid routes, CSV filename, print-only UI, overflow, and errors across all 15 browser/viewport cells."
                                     ]
                    },
                    {
@@ -1379,7 +1682,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Playwright covers the actual recruiter journey, role restrictions, direct URLs, refresh, invalid routes, CSV filename, print-only UI, overflow, and errors across all 15 browser/viewport cells."
                                     ]
                    },
                    {
@@ -1391,7 +1694,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Playwright covers the actual recruiter journey, role restrictions, direct URLs, refresh, invalid routes, CSV filename, print-only UI, overflow, and errors across all 15 browser/viewport cells."
                                     ]
                    },
                    {
@@ -1403,7 +1706,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Playwright covers the actual recruiter journey, role restrictions, direct URLs, refresh, invalid routes, CSV filename, print-only UI, overflow, and errors across all 15 browser/viewport cells."
                                     ]
                    },
                    {
@@ -1415,7 +1718,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Playwright covers the actual recruiter journey, role restrictions, direct URLs, refresh, invalid routes, CSV filename, print-only UI, overflow, and errors across all 15 browser/viewport cells."
                                     ]
                    },
                    {
@@ -1427,7 +1730,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Playwright covers the actual recruiter journey, role restrictions, direct URLs, refresh, invalid routes, CSV filename, print-only UI, overflow, and errors across all 15 browser/viewport cells."
                                     ]
                    },
                    {
@@ -1439,7 +1742,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Playwright covers the actual recruiter journey, role restrictions, direct URLs, refresh, invalid routes, CSV filename, print-only UI, overflow, and errors across all 15 browser/viewport cells."
                                     ]
                    },
                    {
@@ -1451,7 +1754,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "Playwright covers the actual recruiter journey, role restrictions, direct URLs, refresh, invalid routes, CSV filename, print-only UI, overflow, and errors across all 15 browser/viewport cells."
                                     ]
                    },
                    {
@@ -1463,7 +1766,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The product keeps unresolved conditions legible through a real two-way transfer and proof-backed closure; it clearly separates demonstration permissions from authentication and safety procedure."
                                     ]
                    },
                    {
@@ -1475,7 +1778,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The product keeps unresolved conditions legible through a real two-way transfer and proof-backed closure; it clearly separates demonstration permissions from authentication and safety procedure."
                                     ]
                    },
                    {
@@ -1487,7 +1790,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The product keeps unresolved conditions legible through a real two-way transfer and proof-backed closure; it clearly separates demonstration permissions from authentication and safety procedure."
                                     ]
                    },
                    {
@@ -1499,7 +1802,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The product keeps unresolved conditions legible through a real two-way transfer and proof-backed closure; it clearly separates demonstration permissions from authentication and safety procedure."
                                     ]
                    },
                    {
@@ -1511,7 +1814,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The product keeps unresolved conditions legible through a real two-way transfer and proof-backed closure; it clearly separates demonstration permissions from authentication and safety procedure."
                                     ]
                    },
                    {
@@ -1523,7 +1826,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The product keeps unresolved conditions legible through a real two-way transfer and proof-backed closure; it clearly separates demonstration permissions from authentication and safety procedure."
                                     ]
                    },
                    {
@@ -1535,7 +1838,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The product keeps unresolved conditions legible through a real two-way transfer and proof-backed closure; it clearly separates demonstration permissions from authentication and safety procedure."
                                     ]
                    },
                    {
@@ -1547,7 +1850,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The product keeps unresolved conditions legible through a real two-way transfer and proof-backed closure; it clearly separates demonstration permissions from authentication and safety procedure."
                                     ]
                    },
                    {
@@ -1585,7 +1888,7 @@
                                      "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
                                  ],
                        "evidence":  [
-                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                        "The product keeps unresolved conditions legible through a real two-way transfer and proof-backed closure; it clearly separates demonstration permissions from authentication and safety procedure."
                                     ]
                    }
                ],
@@ -1594,49 +1897,49 @@
                                  "question":  "Does everything applicable work flawlessly?",
                                  "answer":  "Pass",
                                  "evidence":  [
-                                                  "Evidence is recorded in UI-AUDIT.md, the responsive matrix, passing test/build output, and the machine-readable checklist."
+                                                  "Evidence is recorded in UI-AUDIT.md, 20 unit tests, the 60-case three-engine responsive matrix, Lighthouse, the dependency audit, and the validated 121-item machine audit."
                                               ]
                              },
                              {
                                  "question":  "Does it achieve the product goal?",
                                  "answer":  "Pass",
                                  "evidence":  [
-                                                  "Evidence is recorded in UI-AUDIT.md, the responsive matrix, passing test/build output, and the machine-readable checklist."
+                                                  "Evidence is recorded in UI-AUDIT.md, 20 unit tests, the 60-case three-engine responsive matrix, Lighthouse, the dependency audit, and the validated 121-item machine audit."
                                               ]
                              },
                              {
                                  "question":  "Does it feel great to use?",
                                  "answer":  "Pass",
                                  "evidence":  [
-                                                  "Evidence is recorded in UI-AUDIT.md, the responsive matrix, passing test/build output, and the machine-readable checklist."
+                                                  "Evidence is recorded in UI-AUDIT.md, 20 unit tests, the 60-case three-engine responsive matrix, Lighthouse, the dependency audit, and the validated 121-item machine audit."
                                               ]
                              },
                              {
                                  "question":  "Does it look great?",
                                  "answer":  "Pass",
                                  "evidence":  [
-                                                  "Evidence is recorded in UI-AUDIT.md, the responsive matrix, passing test/build output, and the machine-readable checklist."
+                                                  "Evidence is recorded in UI-AUDIT.md, 20 unit tests, the 60-case three-engine responsive matrix, Lighthouse, the dependency audit, and the validated 121-item machine audit."
                                               ]
                              },
                              {
                                  "question":  "Is it accessible?",
                                  "answer":  "Pass",
                                  "evidence":  [
-                                                  "Evidence is recorded in UI-AUDIT.md, the responsive matrix, passing test/build output, and the machine-readable checklist."
+                                                  "Evidence is recorded in UI-AUDIT.md, 20 unit tests, the 60-case three-engine responsive matrix, Lighthouse, the dependency audit, and the validated 121-item machine audit."
                                               ]
                              },
                              {
                                  "question":  "Is it fast enough for its context?",
                                  "answer":  "Pass",
                                  "evidence":  [
-                                                  "Evidence is recorded in UI-AUDIT.md, the responsive matrix, passing test/build output, and the machine-readable checklist."
+                                                  "Evidence is recorded in UI-AUDIT.md, 20 unit tests, the 60-case three-engine responsive matrix, Lighthouse, the dependency audit, and the validated 121-item machine audit."
                                               ]
                              },
                              {
                                  "question":  "Is the code maintainable?",
                                  "answer":  "Pass",
                                  "evidence":  [
-                                                  "Evidence is recorded in UI-AUDIT.md, the responsive matrix, passing test/build output, and the machine-readable checklist."
+                                                  "Evidence is recorded in UI-AUDIT.md, 20 unit tests, the 60-case three-engine responsive matrix, Lighthouse, the dependency audit, and the validated 121-item machine audit."
                                               ]
                              }
                          ],

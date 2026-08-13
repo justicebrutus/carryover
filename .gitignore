@@ -2,6 +2,9 @@ node_modules/
 dist/
 .vercel/
 *.log
+test-results/
+playwright-report/
+.lighthouse.json
 .env
 .env.*
 Thumbs.db

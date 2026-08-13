@@ -1,13 +1,72 @@
-import type { CarryoverWorkspaceV1 } from "../domain";
-export const PEOPLE = ["Sam Okoye", "Leah Chen", "Mateo Ruiz", "Avery Singh", "Nora Patel"];
-export const SEED_WORKSPACE: CarryoverWorkspaceV1 = { version:1, recordDate:"2026-08-13", role:"Shift supervisor", issues:[
- {id:"CO-104",title:"Bearing temperature rising",equipment:"Winder 04",area:"Composite line",severity:"Critical",status:"Carried over",owner:"Mateo Ruiz",due:"2026-08-13T08:00",shift:"Night",observation:"Drive-side bearing climbed from 63°C to 78°C over two hours under stable load.",decision:"Keep Winder 04 below 70% speed until maintenance inspection.",evidence:"Thermal image and trend captured at 05:42.",audit:[{id:"AU-1",at:"2026-08-13T05:44",actor:"Nora Patel",event:"Observation recorded",evidence:"Thermal image attached"},{id:"AU-2",at:"2026-08-13T06:08",actor:"Nora Patel",event:"Carryover requested"}]},
- {id:"CO-107",title:"Resin batch viscosity drift",equipment:"Mix Station 02",area:"Resin room",severity:"High",status:"Acknowledged",owner:"Leah Chen",due:"2026-08-13T09:30",shift:"Night",observation:"Two readings reached the upper control limit after material changeover.",decision:"Hold batch R-881 for lab confirmation before line release.",evidence:"Samples R-881-A and R-881-B logged.",audit:[{id:"AU-3",at:"2026-08-13T04:55",actor:"Sam Okoye",event:"Observation recorded"},{id:"AU-4",at:"2026-08-13T06:21",actor:"Leah Chen",event:"Incoming shift acknowledged"}]},
- {id:"CO-109",title:"Guard interlock intermittent",equipment:"Cut Cell 01",area:"Finishing",severity:"High",status:"In action",owner:"Avery Singh",due:"2026-08-13T10:00",shift:"Day",observation:"Interlock failed to confirm closed twice during pre-start verification.",decision:"Cell locked out pending controls inspection.",evidence:"Lockout LOTO-2681 active.",audit:[{id:"AU-5",at:"2026-08-13T06:40",actor:"Avery Singh",event:"Issue escalated and equipment locked out"}]},
- {id:"CO-112",title:"Label printer queue delay",equipment:"Pack Line 03",area:"Shipping",severity:"Moderate",status:"Observed",owner:"Sam Okoye",due:"2026-08-13T13:00",shift:"Day",observation:"Queue pauses between labels for 8–12 seconds.",decision:"Observe first production run; prepare manual labels if delay increases.",evidence:"Video captured during startup.",audit:[{id:"AU-6",at:"2026-08-13T07:02",actor:"Sam Okoye",event:"Observation recorded"}]},
- {id:"CO-098",title:"Hoist pendant cable replaced",equipment:"Bay Hoist 02",area:"Receiving",severity:"Low",status:"Resolved",owner:"Mateo Ruiz",due:"2026-08-12T16:00",shift:"Evening",observation:"Cable jacket split near strain relief.",decision:"Replace before next lift.",evidence:"Replacement verified under no-load and rated-load checks.",audit:[{id:"AU-7",at:"2026-08-12T14:30",actor:"Mateo Ruiz",event:"Observation recorded"},{id:"AU-8",at:"2026-08-12T15:42",actor:"Leah Chen",event:"Resolution approved",evidence:"Rated-load test passed"}]}
- ], handoffs:[{id:"HO-31",fromShift:"Night",toShift:"Day",supervisor:"Nora Patel",summary:"Protect Winder 04 and the resin hold first. Cut Cell 01 remains locked out.",issueIds:["CO-104","CO-107","CO-109"],acknowledgedAt:"2026-08-13T06:21"}], actions:[
- {id:"AC-88",issueId:"CO-104",title:"Inspect Winder 04 drive-side bearing",owner:"Mateo Ruiz",due:"2026-08-13T08:00",state:"Open",approvalRequired:false,resolutionEvidence:""},
- {id:"AC-90",issueId:"CO-107",title:"Confirm viscosity and disposition batch R-881",owner:"Leah Chen",due:"2026-08-13T09:30",state:"Waiting approval",approvalRequired:true,resolutionEvidence:""},
- {id:"AC-92",issueId:"CO-109",title:"Test Cut Cell 01 guard circuit",owner:"Avery Singh",due:"2026-08-13T10:00",state:"Open",approvalRequired:true,resolutionEvidence:""}
- ] };
+import type { CarryoverWorkspaceV2 } from "../domain";
+
+export const PEOPLE = ["Mina Park", "Elias Morgan", "Sofia Reyes", "Noah Williams", "Avery Chen"] as const;
+export const EQUIPMENT = ["Filler 02", "Labeler 02", "Palletizer 01", "CIP Loop B", "Cold-storage Dock 3"] as const;
+
+export const SEED_WORKSPACE: CarryoverWorkspaceV2 = {
+  version: 2,
+  recordDate: "2026-08-13",
+  plant: "Northshore Beverage Packaging",
+  role: "Shift supervisor",
+  activePerson: "Mina Park",
+  nextSequence: 210,
+  issues: [
+    {
+      id: "CO-201", title: "Intermittent label skew after changeover", equipment: "Labeler 02", area: "Packaging hall", severity: "High", status: "Observed", owner: "Noah Williams", due: "2026-08-13T08:30", shift: "Night",
+      observation: "Labels drifted 3–5 mm toward the trailing edge on four bottles after the 355 mL flavour changeover.",
+      decision: "Keep Labeler 02 at reduced speed until alignment is verified across a complete 30-bottle run.",
+      evidence: "Four affected bottles isolated; guide-rail setting and changeover checklist recorded.", resolutionNote: "", linkedHandoffIds: [], linkedActionIds: [],
+      audit: [
+        { id: "AU-201", at: "2026-08-13T05:48", actor: "Noah Williams", event: "Observation recorded", detail: "Four affected bottles isolated." },
+      ],
+    },
+    {
+      id: "CO-202", title: "Fill-height sample outside target", equipment: "Filler 02", area: "Packaging hall", severity: "Critical", status: "Acknowledged", owner: "Sofia Reyes", due: "2026-08-13T08:00", shift: "Night",
+      observation: "Two bottles in the final hourly sample measured below the documented fill-height target.",
+      decision: "Hold pallet 7B and complete quality verification before product release.",
+      evidence: "Pallet 7B placed on quality hold; sample IDs Q-882 through Q-893 logged.", resolutionNote: "", linkedHandoffIds: ["HO-40"], linkedActionIds: ["AC-61"],
+      audit: [
+        { id: "AU-203", at: "2026-08-13T05:12", actor: "Noah Williams", event: "Observation recorded" },
+        { id: "AU-204", at: "2026-08-13T06:42", actor: "Sofia Reyes", event: "Incoming shift acknowledged responsibility" },
+      ],
+    },
+    {
+      id: "CO-203", title: "Case-count photo-eye misses", equipment: "Palletizer 01", area: "End-of-line", severity: "Moderate", status: "In action", owner: "Elias Morgan", due: "2026-08-13T10:00", shift: "Day",
+      observation: "The infeed photo-eye missed two cases during a 20-minute observation window.",
+      decision: "Operate with visual confirmation while maintenance inspects sensor alignment.",
+      evidence: "Affected cases reconciled against the production count.", resolutionNote: "", linkedHandoffIds: ["HO-40"], linkedActionIds: ["AC-62"],
+      audit: [{ id: "AU-205", at: "2026-08-13T06:55", actor: "Elias Morgan", event: "Inspection action assigned" }],
+    },
+    {
+      id: "CO-204", title: "Final rinse conductivity slow to clear", equipment: "CIP Loop B", area: "Sanitation", severity: "High", status: "Observed", owner: "Avery Chen", due: "2026-08-13T12:00", shift: "Day",
+      observation: "Final rinse required six additional minutes to return below the documented conductivity threshold.",
+      decision: "Review the next cycle trend before releasing Loop B for the evening sanitation plan.",
+      evidence: "Cycle trace CIP-B-0813 retained for review.", resolutionNote: "", linkedHandoffIds: [], linkedActionIds: [],
+      audit: [{ id: "AU-206", at: "2026-08-13T07:08", actor: "Avery Chen", event: "Observation recorded" }],
+    },
+    {
+      id: "CO-205", title: "Dock door seal replaced", equipment: "Cold-storage Dock 3", area: "Cold storage", severity: "Low", status: "Resolved", owner: "Elias Morgan", due: "2026-08-12T16:00", shift: "Evening",
+      observation: "Lower door seal showed a visible split during the pre-shift inspection.",
+      decision: "Replace before the next refrigerated trailer is positioned.",
+      evidence: "New seal installed and closure inspected under dock lighting.", resolutionNote: "Door closed evenly through three cycles and no light gap remained.", linkedHandoffIds: [], linkedActionIds: ["AC-60"],
+      audit: [
+        { id: "AU-207", at: "2026-08-12T14:24", actor: "Elias Morgan", event: "Observation recorded" },
+        { id: "AU-208", at: "2026-08-12T15:35", actor: "Mina Park", event: "Resolution approved", detail: "Three closure cycles verified." },
+      ],
+    },
+  ],
+  handoffs: [
+    {
+      id: "HO-40", fromShift: "Night", toShift: "Day", preparedBy: "Noah Williams", preparedAt: "2026-08-13T06:20", summary: "Protect the quality hold at Filler 02 and maintain visual confirmation at Palletizer 01 until both checks are complete.", equipmentState: "Filler 02 stopped with pallet 7B isolated. Palletizer 01 is available at reduced throughput.", workAttempted: "Fill-height samples were repeated and palletizer case counts were reconciled manually.", nextDecision: "Quality disposition for pallet 7B, then maintenance confirmation for the palletizer sensor.", issueIds: ["CO-202", "CO-203"], status: "Acknowledged", acknowledgedAt: "2026-08-13T06:42", acknowledgedBy: "Sofia Reyes", acknowledgementNote: "Hold labels and physical pallet location cross-checked at the line.",
+      audit: [
+        { id: "AU-209", at: "2026-08-13T06:20", actor: "Noah Williams", event: "Handoff prepared" },
+        { id: "AU-210", at: "2026-08-13T06:42", actor: "Sofia Reyes", event: "Incoming shift cross-check completed" },
+      ],
+    },
+  ],
+  actions: [
+    { id: "AC-60", issueId: "CO-205", title: "Replace and verify Dock 3 lower seal", owner: "Elias Morgan", due: "2026-08-12T16:00", expectedProof: "Three complete closure cycles with no visible light gap.", state: "Closed", approvalRequired: false, resolutionEvidence: "Seal replaced; three closure cycles completed without a visible gap.", resolutionNote: "Returned to normal service.", audit: [{ id: "AU-212", at: "2026-08-12T15:35", actor: "Elias Morgan", event: "Action closed with evidence" }] },
+    { id: "AC-61", issueId: "CO-202", title: "Complete fill-height disposition for pallet 7B", owner: "Sofia Reyes", due: "2026-08-13T08:00", expectedProof: "Documented sample result and quality disposition for the isolated pallet.", state: "Waiting approval", approvalRequired: true, resolutionEvidence: "Twelve retained samples measured; results entered against hold QH-118.", resolutionNote: "", audit: [{ id: "AU-213", at: "2026-08-13T07:12", actor: "Sofia Reyes", event: "Evidence submitted for manager approval" }] },
+    { id: "AC-62", issueId: "CO-203", title: "Inspect Palletizer 01 photo-eye alignment", owner: "Elias Morgan", due: "2026-08-13T10:00", expectedProof: "Sensor alignment confirmed through a 20-minute monitored run.", state: "Open", approvalRequired: false, resolutionEvidence: "", resolutionNote: "", audit: [{ id: "AU-214", at: "2026-08-13T06:55", actor: "Mina Park", event: "Action assigned" }] },
+  ],
+};
