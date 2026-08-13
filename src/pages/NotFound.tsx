@@ -1,0 +1,1 @@
+import { Link } from "react-router-dom"; export default function NotFound(){return <div className="page empty"><p className="eyebrow">404 · Record unavailable</p><h1>This workspace route does not exist.</h1><Link className="primary" to="/">Return to overview</Link></div>}

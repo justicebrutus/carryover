@@ -1,0 +1,4 @@
+import type { Issue, Severity } from "../domain";
+export interface IssueFilters { query: string; severity: "All"|Severity; state: "All"|"Open"|"Resolved"; }
+export function filterIssues(issues: Issue[], filters: IssueFilters) { const q=filters.query.trim().toLowerCase(); return issues.filter((issue)=>(!q||[issue.id,issue.title,issue.equipment,issue.area,issue.owner].join(" ").toLowerCase().includes(q))&&(filters.severity==="All"||issue.severity===filters.severity)&&(filters.state==="All"||(filters.state==="Resolved"?issue.status==="Resolved":issue.status!=="Resolved"))); }
+export function issuesCsv(issues: Issue[]) { const esc=(value:string)=>`"${value.replace(/"/g,'""')}"`; return ["ID,Title,Equipment,Area,Severity,Status,Owner,Due,Decision,Evidence",...issues.map(i=>[i.id,i.title,i.equipment,i.area,i.severity,i.status,i.owner,i.due,i.decision,i.evidence].map(esc).join(","))].join("\n"); }
