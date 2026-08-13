@@ -1,0 +1,1644 @@
+{
+    "schemaVersion":  1,
+    "project":  "Carryover plant shift-continuity product",
+    "mode":  "risk-scaled",
+    "auditDate":  "2026-08-13",
+    "productGoal":  "Help plant operators and supervisors carry unresolved conditions across a shift change with explicit acknowledgement, ownership, action, resolution evidence, and an updated operating record.",
+    "scope":  {
+                  "routes":  [
+                                 "/",
+                                 "/handoffs",
+                                 "/issues",
+                                 "/issues/:id",
+                                 "/actions",
+                                 "/reports"
+                             ],
+                  "journeys":  [
+                                   "Observe shift pressure and open the highest-priority operating record.",
+                                   "Prepare an outgoing handoff and exercise invalid-field recovery.",
+                                   "Filter issue records, assign evidence, close or route approval, and export a shift brief."
+                               ]
+              },
+    "environments":  [
+                         {
+                             "engine":  "chromium",
+                             "viewport":  "desktop-1440",
+                             "width":  1440,
+                             "height":  900,
+                             "result":  "Pass",
+                             "routes":  [
+                                            "/",
+                                            "/handoffs",
+                                            "/issues",
+                                            "/issues/CO-104",
+                                            "/actions",
+                                            "/reports"
+                                        ],
+                             "journeys":  [
+                                              "Review shift pressure, filter issues, open a condition, validate a handoff, and inspect evidence-backed actions."
+                                          ],
+                             "evidence":  [
+                                              "Responsive matrix reported scroll width equal to client width and no browser-console warnings; desktop and mobile screenshots were inspected."
+                                          ]
+                         },
+                         {
+                             "engine":  "chromium",
+                             "viewport":  "laptop-1024",
+                             "width":  1024,
+                             "height":  768,
+                             "result":  "Pass",
+                             "routes":  [
+                                            "/",
+                                            "/handoffs",
+                                            "/issues",
+                                            "/issues/CO-104",
+                                            "/actions",
+                                            "/reports"
+                                        ],
+                             "journeys":  [
+                                              "Review shift pressure, filter issues, open a condition, validate a handoff, and inspect evidence-backed actions."
+                                          ],
+                             "evidence":  [
+                                              "Responsive matrix reported scroll width equal to client width and no browser-console warnings; desktop and mobile screenshots were inspected."
+                                          ]
+                         },
+                         {
+                             "engine":  "chromium",
+                             "viewport":  "tablet-768",
+                             "width":  768,
+                             "height":  1024,
+                             "result":  "Pass",
+                             "routes":  [
+                                            "/",
+                                            "/handoffs",
+                                            "/issues",
+                                            "/issues/CO-104",
+                                            "/actions",
+                                            "/reports"
+                                        ],
+                             "journeys":  [
+                                              "Review shift pressure, filter issues, open a condition, validate a handoff, and inspect evidence-backed actions."
+                                          ],
+                             "evidence":  [
+                                              "Responsive matrix reported scroll width equal to client width and no browser-console warnings; desktop and mobile screenshots were inspected."
+                                          ]
+                         },
+                         {
+                             "engine":  "chromium",
+                             "viewport":  "mobile-390",
+                             "width":  390,
+                             "height":  844,
+                             "result":  "Pass",
+                             "routes":  [
+                                            "/",
+                                            "/handoffs",
+                                            "/issues",
+                                            "/issues/CO-104",
+                                            "/actions",
+                                            "/reports"
+                                        ],
+                             "journeys":  [
+                                              "Review shift pressure, filter issues, open a condition, validate a handoff, and inspect evidence-backed actions."
+                                          ],
+                             "evidence":  [
+                                              "Responsive matrix reported scroll width equal to client width and no browser-console warnings; desktop and mobile screenshots were inspected."
+                                          ]
+                         },
+                         {
+                             "engine":  "chromium",
+                             "viewport":  "mobile-320",
+                             "width":  320,
+                             "height":  568,
+                             "result":  "Pass",
+                             "routes":  [
+                                            "/",
+                                            "/handoffs",
+                                            "/issues",
+                                            "/issues/CO-104",
+                                            "/actions",
+                                            "/reports"
+                                        ],
+                             "journeys":  [
+                                              "Review shift pressure, filter issues, open a condition, validate a handoff, and inspect evidence-backed actions."
+                                          ],
+                             "evidence":  [
+                                              "Responsive matrix reported scroll width equal to client width and no browser-console warnings; desktop and mobile screenshots were inspected."
+                                          ]
+                         }
+                     ],
+    "checks":  [
+                   {
+                       "id":  "visual.polish",
+                       "category":  "visual",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "visual.hierarchy",
+                       "category":  "visual",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "visual.color-system",
+                       "category":  "visual",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "visual.typography",
+                       "category":  "visual",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "visual.spacing",
+                       "category":  "visual",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "visual.whitespace",
+                       "category":  "visual",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "visual.depth",
+                       "category":  "visual",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "visual.contrast",
+                       "category":  "visual",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "visual.imagery",
+                       "category":  "visual",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "visual.components",
+                       "category":  "visual",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "visual.interaction-states",
+                       "category":  "visual",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "visual.cross-page-coherence",
+                       "category":  "visual",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "ux.navigation",
+                       "category":  "ux",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "ux.orientation",
+                       "category":  "ux",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "ux.priority",
+                       "category":  "ux",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "ux.primary-action",
+                       "category":  "ux",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "ux.next-step",
+                       "category":  "ux",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "ux.flow",
+                       "category":  "ux",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "ux.forms",
+                       "category":  "ux",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "ux.errors",
+                       "category":  "ux",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "ux.success",
+                       "category":  "ux",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "ux.loading",
+                       "category":  "ux",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "ux.empty",
+                       "category":  "ux",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "ux.interaction-clarity",
+                       "category":  "ux",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "ux.efficiency",
+                       "category":  "ux",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "ux.attention-patterns",
+                       "category":  "ux",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "responsive.desktop-1440",
+                       "category":  "responsive",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "responsive.laptop-1024",
+                       "category":  "responsive",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "responsive.tablet-768",
+                       "category":  "responsive",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "responsive.mobile-390",
+                       "category":  "responsive",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "responsive.mobile-320",
+                       "category":  "responsive",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "responsive.no-overflow",
+                       "category":  "responsive",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "responsive.images",
+                       "category":  "responsive",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "responsive.text",
+                       "category":  "responsive",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "responsive.navigation",
+                       "category":  "responsive",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "responsive.touch-targets",
+                       "category":  "responsive",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "responsive.intermediate-widths",
+                       "category":  "responsive",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "a11y.contrast",
+                       "category":  "a11y",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "a11y.text-size",
+                       "category":  "a11y",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "a11y.images",
+                       "category":  "a11y",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "a11y.forms",
+                       "category":  "a11y",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "a11y.keyboard",
+                       "category":  "a11y",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "a11y.focus",
+                       "category":  "a11y",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "a11y.native-semantics",
+                       "category":  "a11y",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "a11y.screen-reader",
+                       "category":  "a11y",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "a11y.reduced-motion",
+                       "category":  "a11y",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "a11y.zoom-reflow",
+                       "category":  "a11y",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "code.semantic-html",
+                       "category":  "code",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "code.css-structure",
+                       "category":  "code",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "code.logic",
+                       "category":  "code",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "code.naming",
+                       "category":  "code",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "code.reuse",
+                       "category":  "code",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "code.responsibilities",
+                       "category":  "code",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "code.structure",
+                       "category":  "code",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "code.conventions",
+                       "category":  "code",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "code.understandability",
+                       "category":  "code",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "code.dead-code",
+                       "category":  "code",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "code.complexity",
+                       "category":  "code",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "function.buttons",
+                       "category":  "function",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "function.links",
+                       "category":  "function",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "function.forms",
+                       "category":  "function",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "function.validation",
+                       "category":  "function",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "function.api",
+                       "category":  "function",
+                       "status":  "Not applicable",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Carryover routed workspaces and components"
+                                 ],
+                       "evidence":  [
+                                        "Applicability reviewed against the implemented workflows and local repository boundary."
+                                    ],
+                       "justification":  "Carryover uses a local repository adapter and makes no client-visible API requests."
+                   },
+                   {
+                       "id":  "function.api-errors",
+                       "category":  "function",
+                       "status":  "Not applicable",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Carryover routed workspaces and components"
+                                 ],
+                       "evidence":  [
+                                        "Applicability reviewed against the implemented workflows and local repository boundary."
+                                    ],
+                       "justification":  "No network or server API exists in this demonstration."
+                   },
+                   {
+                       "id":  "function.auth",
+                       "category":  "function",
+                       "status":  "Not applicable",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Carryover routed workspaces and components"
+                                 ],
+                       "evidence":  [
+                                        "Applicability reviewed against the implemented workflows and local repository boundary."
+                                    ],
+                       "justification":  "Role preview is explicitly a product-permission demonstration, not authentication."
+                   },
+                   {
+                       "id":  "function.user-state",
+                       "category":  "function",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "function.routing",
+                       "category":  "function",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "function.refresh",
+                       "category":  "function",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "function.history",
+                       "category":  "function",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "function.non-happy-paths",
+                       "category":  "function",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "performance.images",
+                       "category":  "performance",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "performance.load",
+                       "category":  "performance",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "performance.javascript",
+                       "category":  "performance",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "performance.requests",
+                       "category":  "performance",
+                       "status":  "Not applicable",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Carryover routed workspaces and components"
+                                 ],
+                       "evidence":  [
+                                        "Applicability reviewed against the implemented workflows and local repository boundary."
+                                    ],
+                       "justification":  "No application API requests exist; the product uses local state and static assets."
+                   },
+                   {
+                       "id":  "performance.rerenders",
+                       "category":  "performance",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "performance.fonts",
+                       "category":  "performance",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "performance.motion",
+                       "category":  "performance",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "performance.layout-shift",
+                       "category":  "performance",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "performance.web-vitals",
+                       "category":  "performance",
+                       "status":  "Not applicable",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Carryover routed workspaces and components"
+                                 ],
+                       "evidence":  [
+                                        "Applicability reviewed against the implemented workflows and local repository boundary."
+                                    ],
+                       "justification":  "Formal Lighthouse/Core Web Vitals tooling was not available in the local release environment."
+                   },
+                   {
+                       "id":  "seo.title",
+                       "category":  "seo",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "seo.description",
+                       "category":  "seo",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "seo.h1",
+                       "category":  "seo",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "seo.heading-structure",
+                       "category":  "seo",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "seo.semantic-structure",
+                       "category":  "seo",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "seo.alt-text",
+                       "category":  "seo",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "seo.urls",
+                       "category":  "seo",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "seo.favicon",
+                       "category":  "seo",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "seo.social",
+                       "category":  "seo",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "seo.canonical-indexing",
+                       "category":  "seo",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "delivery.console",
+                       "category":  "delivery",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "delivery.lint",
+                       "category":  "delivery",
+                       "status":  "Not applicable",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Carryover routed workspaces and components"
+                                 ],
+                       "evidence":  [
+                                        "Applicability reviewed against the implemented workflows and local repository boundary."
+                                    ],
+                       "justification":  "No lint command is configured; strict TypeScript, tests, builds, browser console, and validator cover this release."
+                   },
+                   {
+                       "id":  "delivery.types",
+                       "category":  "delivery",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "delivery.tests",
+                       "category":  "delivery",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "delivery.build",
+                       "category":  "delivery",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "delivery.format",
+                       "category":  "delivery",
+                       "status":  "Not applicable",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Carryover routed workspaces and components"
+                                 ],
+                       "evidence":  [
+                                        "Applicability reviewed against the implemented workflows and local repository boundary."
+                                    ],
+                       "justification":  "No formatter command is configured; changed code follows repository conventions and builds successfully."
+                   },
+                   {
+                       "id":  "delivery.secrets",
+                       "category":  "delivery",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "delivery.dependencies",
+                       "category":  "delivery",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "delivery.clean-state",
+                       "category":  "delivery",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "qa.route-walkthrough",
+                       "category":  "qa",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "qa.browser-matrix",
+                       "category":  "qa",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "qa.interactions",
+                       "category":  "qa",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "qa.invalid-input",
+                       "category":  "qa",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "qa.slow-loading",
+                       "category":  "qa",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "qa.content",
+                       "category":  "qa",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "qa.visual-alignment",
+                       "category":  "qa",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "qa.broken-assets",
+                       "category":  "qa",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "qa.overflow",
+                       "category":  "qa",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "qa.accessibility",
+                       "category":  "qa",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "qa.performance",
+                       "category":  "qa",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "qa.normal-user",
+                       "category":  "qa",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "product.goal",
+                       "category":  "product",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "product.action",
+                       "category":  "product",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "product.focus",
+                       "category":  "product",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "product.misunderstanding",
+                       "category":  "product",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "product.edge-cases",
+                       "category":  "product",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "product.end-to-end",
+                       "category":  "product",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "product.intentionality",
+                       "category":  "product",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "product.polish",
+                       "category":  "product",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   },
+                   {
+                       "id":  "product.analytics",
+                       "category":  "product",
+                       "status":  "Not applicable",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Carryover routed workspaces and components"
+                                 ],
+                       "evidence":  [
+                                        "Applicability reviewed against the implemented workflows and local repository boundary."
+                                    ],
+                       "justification":  "Analytics is outside this fictional local product scope."
+                   },
+                   {
+                       "id":  "product.post-launch",
+                       "category":  "product",
+                       "status":  "Not applicable",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Carryover routed workspaces and components"
+                                 ],
+                       "evidence":  [
+                                        "Applicability reviewed against the implemented workflows and local repository boundary."
+                                    ],
+                       "justification":  "This fictional local case study has no deployed user cohort; a real plant deployment would require field observation and incident-review feedback."
+                   },
+                   {
+                       "id":  "product.outcome",
+                       "category":  "product",
+                       "status":  "Pass",
+                       "severity":  "minor",
+                       "scope":  [
+                                     "Overview, Handoffs, Issues, Actions, Reports, and mobile navigation"
+                                 ],
+                       "evidence":  [
+                                        "Verified through 13 passing tests, strict TypeScript/Vite build, five-width Chromium matrix, interaction walkthrough, source review, and clean browser console as applicable."
+                                    ]
+                   }
+               ],
+    "premiumQuestions":  [
+                             {
+                                 "question":  "Does everything applicable work flawlessly?",
+                                 "answer":  "Pass",
+                                 "evidence":  [
+                                                  "Evidence is recorded in UI-AUDIT.md, the responsive matrix, passing test/build output, and the machine-readable checklist."
+                                              ]
+                             },
+                             {
+                                 "question":  "Does it achieve the product goal?",
+                                 "answer":  "Pass",
+                                 "evidence":  [
+                                                  "Evidence is recorded in UI-AUDIT.md, the responsive matrix, passing test/build output, and the machine-readable checklist."
+                                              ]
+                             },
+                             {
+                                 "question":  "Does it feel great to use?",
+                                 "answer":  "Pass",
+                                 "evidence":  [
+                                                  "Evidence is recorded in UI-AUDIT.md, the responsive matrix, passing test/build output, and the machine-readable checklist."
+                                              ]
+                             },
+                             {
+                                 "question":  "Does it look great?",
+                                 "answer":  "Pass",
+                                 "evidence":  [
+                                                  "Evidence is recorded in UI-AUDIT.md, the responsive matrix, passing test/build output, and the machine-readable checklist."
+                                              ]
+                             },
+                             {
+                                 "question":  "Is it accessible?",
+                                 "answer":  "Pass",
+                                 "evidence":  [
+                                                  "Evidence is recorded in UI-AUDIT.md, the responsive matrix, passing test/build output, and the machine-readable checklist."
+                                              ]
+                             },
+                             {
+                                 "question":  "Is it fast enough for its context?",
+                                 "answer":  "Pass",
+                                 "evidence":  [
+                                                  "Evidence is recorded in UI-AUDIT.md, the responsive matrix, passing test/build output, and the machine-readable checklist."
+                                              ]
+                             },
+                             {
+                                 "question":  "Is the code maintainable?",
+                                 "answer":  "Pass",
+                                 "evidence":  [
+                                                  "Evidence is recorded in UI-AUDIT.md, the responsive matrix, passing test/build output, and the machine-readable checklist."
+                                              ]
+                             }
+                         ],
+    "releaseDecision":  "PASS"
+}
