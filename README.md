@@ -2,6 +2,8 @@
 
 **Shift continuity for the work that cannot be dropped.**
 
+**Live:** https://carryover-6m1z.vercel.app/
+
 Carryover is a fictional plant-operations product case study for preparing shift handoffs, accepting responsibility, assigning action, and recording proof of closure.
 
 `Observation → Prepared handoff → Incoming cross-check → Assigned action → Resolution evidence → Updated operating record`
