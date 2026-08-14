@@ -1,5 +1,5 @@
 import { SEED_WORKSPACE } from "../data/seed";
-import type { ActionRecord, CarryoverWorkspaceV2, Handoff, Issue, IssueStatus, Permission, Role } from "../domain";
+import type { ActionRecord, AuditEntry, CarryoverWorkspaceV2, Handoff, Issue, IssueStatus, Permission, Role } from "../domain";
 
 export const STORAGE_KEY = "carryover.workspace.v2";
 export const LEGACY_STORAGE_KEY = "carryover.workspace.v1";
@@ -66,6 +66,23 @@ export const can = (role: Role, permission: Permission) => permissions[role].inc
 export const unresolved = (issues: Issue[]) => issues.filter((issue) => issue.status !== "Resolved");
 export const overdue = (issues: Issue[], now = DEMO_NOW) => unresolved(issues).filter((issue) => issue.due < now);
 export const unacknowledged = (handoffs: Handoff[]) => handoffs.filter((handoff) => handoff.status === "Prepared");
+
+/** The most recent audit event across the whole workspace, by sequence id. Used
+ *  to label the undo/redo affordance (e.g. "Undo: Handoff prepared"). */
+export function latestAudit(workspace: CarryoverWorkspaceV2): AuditEntry | undefined {
+  let newest: AuditEntry | undefined;
+  let newestSeq = -1;
+  const scan = (entries: AuditEntry[]) => {
+    for (const entry of entries) {
+      const seq = Number(entry.id.split("-")[1]);
+      if (Number.isFinite(seq) && seq > newestSeq) { newestSeq = seq; newest = entry; }
+    }
+  };
+  workspace.issues.forEach((issue) => scan(issue.audit));
+  workspace.handoffs.forEach((handoff) => scan(handoff.audit));
+  workspace.actions.forEach((action) => scan(action.audit));
+  return newest;
+}
 
 function nextId(workspace: CarryoverWorkspaceV2, prefix: "CO" | "HO" | "AC" | "AU") { return `${prefix}-${workspace.nextSequence}`; }
 function advance(workspace: CarryoverWorkspaceV2) { return { ...workspace, nextSequence: workspace.nextSequence + 1 }; }

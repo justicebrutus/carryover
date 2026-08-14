@@ -54,3 +54,11 @@ All actionable controls target at least 44px. Mobile navigation closes on select
 ## Copy voice
 
 Short, specific, and accountable. Use “cross-check the equipment state” instead of “collaborate seamlessly.” Buttons predict outcomes: “Publish prepared handoff,” “Acknowledge responsibility,” and “Approve and close.”
+
+## Product-depth interaction patterns
+
+- **Command surface** (Ctrl/Cmd+K, or the on-screen trigger): a centered graphite-bordered dialog over a scrim. Mono group labels, hairline rows, and the active row inverts to graphite with amber-tinted hints. It is a `role="dialog"` with a `role="combobox"` input over a `role="listbox"`; focus is trapped and restored to the trigger on close. It searches the real record set — never a separate data source.
+- **Undo / redo**: a mono `Undo / Redo` pair in the workspace tool bar, disabled when empty and titled with the change label. Time-travel rewinds the operating record and its immutable audit trail together; it is session state, never persisted history. Global Ctrl/Cmd+Z is suppressed while a text field is focused so native editing is preserved.
+- **Cross-tab feedback**: a change adopted from another tab is announced through the shared `aria-live` status region — the same channel as recovery and migration notices. Text first; no transmission implied.
+- **Shared focus trap**: one `useFocusTrap` hook backs both the responsive navigation sheet and the command palette, so keyboard and screen-reader behaviour stay identical.
+- New application controls carry the `no-print` class and are removed from print output.

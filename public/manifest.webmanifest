@@ -1,0 +1,14 @@
+{
+  "name": "Carryover — Shift continuity",
+  "short_name": "Carryover",
+  "description": "Prepare shift handoffs, accept responsibility, assign action, and record proof of closure.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f3f4f2",
+  "theme_color": "#15191c",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

@@ -20,7 +20,9 @@
                   "journeys":  [
                                    "Complete Observation → prepared handoff → incoming cross-check → assigned action → evidence → closure, then refresh the operating record.",
                                    "Change role preview and verify unavailable actions explain the required role.",
-                                   "Export the filtered CSV, inspect print-only output, use responsive navigation by keyboard, and recover invalid routes."
+                                   "Export the filtered CSV, inspect print-only output, use responsive navigation by keyboard, and recover invalid routes.",
+                                   "Open the command palette (Ctrl/Cmd+K), search a real record and run a command; undo and redo a real record mutation with the operating record and its immutable audit trail reverting and re-applying; and confirm a change in one tab live-syncs to another.",
+                                   "Install the app from its web manifest and reload with the network fully offline; the service worker serves the cached shell and hashed assets and the workspace still renders and operates from local persistence."
                                ]
               },
     "environments":  [

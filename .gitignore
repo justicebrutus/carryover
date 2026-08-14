@@ -11,3 +11,6 @@ Thumbs.db
 
 .vercel
 .env*
+
+# local verification scratch scripts
+pwa-check.mjs
